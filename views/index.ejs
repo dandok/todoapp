@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <div class="grid-container">
+      <header>
+        <%- include('./partials/header'); %>
+      </header>
+      <main>
+      <p>Welcome to <%= title %></p>
+      <div class="home">
+        <div class="welcome">
+            Welcome to my todo app. This is an application that allows to manage a list of tasks to do. It performs adding, updating, deleting and toggling state of each task. It has minimalistic design and basic functionality. Kindly click on the signin or register below button to proceed.
+        </div>
+        <div class="welcome">
+            <span class="reg"><a href="/registration" class="link">Register</a></span>
+            <span class="reg"><a href="/signin" class="link"> Sign in</a></span>
+        </div>
+    </div>
+      </main>
+      <footer>
+        <%- include('./partials/footer'); %>
+      </footer>
+    </div>
+    <script src="/javascripts/script.js"></script>
+  </body>
+</html>

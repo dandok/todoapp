@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <div class="grid-container">
+      <header>
+        <%- include('./partials/header'); %>
+      </header>
+      <main>
+        <div>
+          <form class="form" onSubmit="registration(event)">
+
+              <div>
+                  <h1>Create Account</h1>
+              </div>
+
+
+              <div class="variant" id="regerror" style="display: none;"></div>
+              
+
+              <div>
+                  <label htmlFor="name">Name</label>
+                  <input
+                      type="text"
+                      id="name1"
+                      placeholder="Enter name"
+                      required
+                  ></input>
+              </div>
+              <div>
+                  <label htmlFor="email">Email address</label>
+                  <input
+                      type="email"
+                      id="email1"
+                      placeholder="Enter email"
+                      required
+                  ></input>
+              </div>
+              <div>
+                  <label htmlFor="password">Password</label>
+                  <input
+                      type="password"
+                      id="password1"
+                      placeholder="Enter password"
+                      required
+                  ></input>
+              </div>
+              <div>
+                  <label htmlFor="confirmPassword">Password</label>
+                  <input
+                      type="password"
+                      id="confirmPassword1"
+                      placeholder="Enter confirm password"
+                      required
+                  ></input>
+              </div>
+              <div>
+                  <label />
+                  <button type="submit">
+                      Register
+                  </button>
+              </div>
+              <div>
+                  <label />
+                  <div>
+                      Already have an account? <a href="/signin" class="link primary">Sign-In</a>
+                  </div>
+              </div>
+          </form>
+      </div>
+      </main>
+      <footer>
+        <%- include('./partials/footer'); %>
+      </footer>
+    </div>
+    <script src="/javascripts/script.js"></script>
+  </body>
+</html>
