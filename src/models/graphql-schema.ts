@@ -162,8 +162,8 @@ const mutation = new GraphQLObjectType({
         if (!user) {
           return null;
         }
-        user.name = args.name;
-        user.email = args.email;
+        user.name = args.name || user.name;
+        user.email = args.email || user.email;
         return user.save();
       },
     },
