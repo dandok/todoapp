@@ -7,6 +7,8 @@ import logger from 'morgan';
 import { run } from './db/mongoose';
 import userRouter from './routes/user-router'
 import todoRouter from './routes/todo-router'
+import {graphqlHTTP} from 'express-graphql'
+import schema from './models/graphql-schema'
 
 
 dotenv.config()
@@ -19,6 +21,11 @@ run()
 // view engine setup
 app.set('views', path.join(__dirname, '..', 'views'));
 app.set('view engine', 'ejs');
+
+app.use('/graphql', graphqlHTTP({
+  schema:schema,
+  graphiql: true
+}))
 
 app.use(logger('dev'));
 app.use(express.json());
